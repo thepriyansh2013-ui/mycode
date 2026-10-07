@@ -1,0 +1,40 @@
+def calculate_result():
+    # 1. Get marks for the three subjects
+    mark1 = float(input("Enter marks for subject 1: "))
+    mark2 = float(input("Enter marks for subject 2: "))
+    mark3 = float(input("Enter marks for subject 3: "))
+
+    # 2. Add the marks
+    total = mark1 + mark2 + mark3
+
+    # 3. Calculate the percentage (300 is the maximum total)
+    percentage = (total / 300) * 100
+
+    # 4. Check whether the student passed all three subjects
+    if mark1 >= 35 and mark2 >= 35 and mark3 >= 35:
+        result = "Pass"
+
+        # 5. Choose a grade based on the percentage
+        if percentage >= 80:
+            grade = "A"
+        elif percentage >= 70:
+            grade = "B"
+        elif percentage >= 60:
+            grade = "C"
+        elif percentage >= 50:
+            grade = "D"
+        else:
+            grade = "E"
+    else:
+        result = "Fail"
+        grade = "F"
+
+    # 6. Display the results
+    print("\nTotal marks:", total, "out of 300")
+    print(f"Percentage: {percentage:.2f}%")
+    print("Result:", result)
+    print("Grade:", grade)
+
+
+# 7. Run the function
+calculate_result()
